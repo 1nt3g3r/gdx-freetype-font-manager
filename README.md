@@ -26,7 +26,7 @@ Edit your top build.gradle file:
         ...
         dependencies {
            ...
-           compile 'com.github.1nt3g3r:gdx-freetype-font-manager:v1.0'
+           compile 'com.github.1nt3g3r:gdx-freetype-font-manager:v1.1'
         }
     }
 
@@ -36,11 +36,11 @@ Edit your top build.gradle file:
         ...
         dependencies {
               ...
-    	        compile 'com.github.1nt3g3r:gdx-freetype-font-manager:v1.0'
+    	        compile 'com.github.1nt3g3r:gdx-freetype-font-manager:v1.1'
         }
     }
     
-  You see we are using **v1.0** version here. But you can change it. Just look **Releases** section of this repository if you want to use any other version.
+  You see we are using **v1.1** version here. But you can change it. Just look **Releases** section of this repository if you want to use any other version.
   
 # How to init and destroy library?
 Just create new instance of FreetypeFontManager class and keep it. You will use this instance to generate fonts. Also don't forget to dispose library when you will exit from your game to avoid memory leaks. Example code:
