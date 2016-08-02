@@ -1,6 +1,6 @@
 # Description
 
-Utility class for Gdx Freetype Extension which allows you easily manage multiple .ttf fonts.
+Utility library for Gdx Freetype Extension which allows you easily manage multiple .ttf fonts.
 
 LibGDX allows you to use .ttf fonts using gdx-freetype-extension. This extension can generate needed bitmap font from almost any .ttf font in runtime. It's very nice feature and it's simple to use it when you're using only one font. But when you're using multiple .ttf fonts with different size, it's little hard to manage all them. This library allows you avoid this trouble.
 
@@ -40,7 +40,9 @@ Edit your top build.gradle file:
         }
     }
     
-  You see we are using **v1.1** version here. But you can change it. Just look **Releases** section of this repository if you want to use any other version.
+ You see we are using **v1.1** version here. But you can change it. Just look **Releases** section of this repository if you want to use any other version.
+  
+ Refresh your gradle dependencies using **./gradlew --refresh-dependencies**. Call it from command line.
   
 # How to init and destroy library?
 Just create new instance of FreetypeFontManager class and keep it. You will use this instance to generate fonts. Also don't forget to dispose library when you will exit from your game to avoid memory leaks. Example code:
