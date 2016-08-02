@@ -50,6 +50,10 @@ public class FreetypeFontManager implements Disposable {
     public void loadFont(String name, int size, FreeTypeFontGenerator.FreeTypeFontParameter parameter) {
         loadFont(name, size, defaultChars, parameter);
     }
+    
+    public void loadFont(String name, int size, String chars) {
+    	loadFont(name, size, chars, new FreeTypeFontGenerator.FreeTypeFontParameter());
+    }
 
     public void loadFont(String fontName, int fontSize, String chars, FreeTypeFontGenerator.FreeTypeFontParameter parameter) {
         String fullFontName = getFullFontName(fontName, fontSize);
