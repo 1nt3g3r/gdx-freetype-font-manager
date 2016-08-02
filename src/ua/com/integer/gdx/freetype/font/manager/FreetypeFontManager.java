@@ -10,6 +10,7 @@ public class FreetypeFontManager implements Disposable {
     private String defaultChars = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯяabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789][_!$%#@|\\/?-+=()*&.;:,{}\"´`'<>’";
     private String fontsFolder = "ttf-fonts/";
     private StringBuilder tmpStringBuilder = new StringBuilder();
+    private String defaultFontName = "Roboto-Condensed";
     
     private ObjectMap<String, FreeTypeFontGenerator> generators = new ObjectMap<String, FreeTypeFontGenerator>();
     private ObjectMap<String, BitmapFont> fonts = new ObjectMap<String, BitmapFont>();
@@ -18,10 +19,30 @@ public class FreetypeFontManager implements Disposable {
         this.fontsFolder = fontsFolder;
     }
     
+    public String getFontsFolder() {
+		return fontsFolder;
+	}
+    
     public void setDefaultChars(String defaultChars) {
 		this.defaultChars = defaultChars;
 	}
-
+    
+    public String getDefaultChars() {
+		return defaultChars;
+	}
+    
+    public void setDefaultFontName(String defaultFontName) {
+		this.defaultFontName = defaultFontName;
+	}
+    
+    public String getDefaultFontName() {
+		return defaultFontName;
+	}
+    
+    public void loadFont(int size) {
+    	loadFont(defaultFontName, size);
+    }
+    
     public void loadFont(String name, int size) {
         loadFont(name, size, new FreeTypeFontGenerator.FreeTypeFontParameter());
     }
@@ -41,6 +62,10 @@ public class FreetypeFontManager implements Disposable {
             BitmapFont font = generator.generateFont(parameter);
             fonts.put(fullFontName, font);
         }
+    }
+    
+    public BitmapFont getFont(int fontSize) {
+    	return getFont(defaultFontName, fontSize);
     }
 
     public BitmapFont getFont(String fontName, int fontSize) {
