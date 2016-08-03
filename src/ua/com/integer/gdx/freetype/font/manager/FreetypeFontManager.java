@@ -102,7 +102,7 @@ public class FreetypeFontManager implements Disposable {
     /**
      * Load font with given font name, size, and additional parameters
      * @param name name of .ttf file (without .ttf extension)
-     * @param parameter specific font effects (shadow, border, etc). Look {@FreeTypeFontParameter} to get more
+     * @param parameter specific font effects (shadow, border, etc). Look {@link FreeTypeFontParameter} to get more
      */
     public void loadFont(String name, int size, FreeTypeFontGenerator.FreeTypeFontParameter parameter) {
         loadFont(name, size, defaultChars, parameter);
