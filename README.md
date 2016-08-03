@@ -26,7 +26,7 @@ Edit your top build.gradle file:
         ...
         dependencies {
            ...
-           compile 'com.github.1nt3g3r:gdx-freetype-font-manager:1.0.0'
+           compile 'com.github.1nt3g3r:gdx-freetype-font-manager:1.0.2'
         }
     }
 
@@ -36,11 +36,11 @@ Edit your top build.gradle file:
         ...
         dependencies {
               ...
-    	        compile 'com.github.1nt3g3r:gdx-freetype-font-manager:1.0.0'
+    	        compile 'com.github.1nt3g3r:gdx-freetype-font-manager:1.0.2'
         }
     }
     
- You see we are using **1.0.0** version here. But you can change it. Just look **Releases** section of this repository if you want to use any other version.
+ You see we are using **1.0.2** version here. But you can change it. Just look **Releases** section of this repository if you want to use any other version.
   
  Refresh your gradle dependencies using **./gradlew --refresh-dependencies**. Call it from command line.
   
